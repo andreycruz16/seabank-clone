@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/Navigation/NavBar";
 import styled from "styled-components";
 
 export default function App() {
@@ -10,9 +10,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <MainContainer>
-        
-      </MainContainer>
+      <MainContainer />
     </>
   );
 }

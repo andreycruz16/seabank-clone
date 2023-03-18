@@ -3,5 +3,5 @@
   font-size: 14px;
   line-height: 24px;
   color: #202325;
-  /* scroll-behavior:smooth */
+  box-sizing: border-box;
 }
