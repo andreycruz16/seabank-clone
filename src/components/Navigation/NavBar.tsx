@@ -26,45 +26,43 @@ const Header = styled.header`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   height: 64px;
-  padding: 0 17%;
   position: sticky;
   top: 0;
   z-index: 10;
 `;
 
 const Navigation = styled.nav`
-  display: flex;
-  width: 100%;
   align-items: center;
+  display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 1250px;
 `;
 
 const NavItems = styled.div`
-  display: flex;
-  align-items: flex-end;
-  /* justify-content: space-between; */
   align-items: center;
+  display: flex;
 `;
 
 const RegisterBtn = styled.div`
-  display: flex;
-  cursor: pointer;
   background-color: #ea5f00;
+  border-radius: 20px;
   color: #ffffff;
-  height: 40px;
+  cursor: pointer;
+  display: flex;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 20px;
-  padding: 8px 22px;
+  height: 40px;
   line-height: 24px;
+  padding: 8px 22px;
 `;
 
 const Logo = styled.a`
-  display: flex;
   color: #202325;
   cursor: pointer;
+  display: flex;
   font-size: 1.5rem;
+  height: 36px;
   text-decoration: none;
   width: 111px;
-  height: 36px;
 `;
