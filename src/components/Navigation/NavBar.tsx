@@ -12,7 +12,7 @@ export default function NavBar() {
         </Logo>
         <NavItems>
           <NavItem title={"Home"} active />
-          <NavItem title={"Products & Service"} />
+          <NavItem title={"Products & Services"} />
           <NavItem title={"Help Center"} />
           <RegisterBtn>Register for Free</RegisterBtn>
         </NavItems>
@@ -36,7 +36,7 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3.1rem;
   width: 1350px;
 `;
 
