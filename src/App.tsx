@@ -2,6 +2,7 @@ import NavBar from "./components/Navigation/NavBar";
 import Banner from "./components/Banner/Banner";
 import About from "./components/About/About";
 import SavingsAccount from "./components/SavingsAccount/SavingsAccount";
+import SecurityFeatures from "./components/SecurityFeatures/SecurityFeatures";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Banner />
       <About />
       <SavingsAccount />
+      <SecurityFeatures/>
     </div>
   );
 }
