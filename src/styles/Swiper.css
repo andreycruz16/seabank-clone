@@ -15,6 +15,10 @@ swiper-slide {
 swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 720px;
   object-fit: cover;
+}
+
+:root {
+  --swiper-theme-color: #fefefe;
 }

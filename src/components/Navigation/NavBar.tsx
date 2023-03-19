@@ -40,7 +40,7 @@ const Navigation = styled.nav`
   width: 1350px;
 `;
 
-const NavItems = styled.a`
+const NavItems = styled.div`
   align-items: center;
   display: flex;
 `;
