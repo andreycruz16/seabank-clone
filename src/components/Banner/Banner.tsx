@@ -84,7 +84,7 @@ function Banner() {
         centered-slides="true"
         autoplay-delay="5000"
         speed="500"
-        autoplay-disable-on-interaction="true"
+        autoplay-disable-on-interaction="false"
         loop="true"
       >
         <swiper-slide>

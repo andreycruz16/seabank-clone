@@ -1,6 +1,7 @@
 import NavBar from "./components/Navigation/NavBar";
 import Banner from "./components/Banner/Banner";
 import About from "./components/About/About";
+import SavingsAccount from "./components/SavingsAccount/SavingsAccount";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <NavBar />
       <Banner />
       <About />
+      <SavingsAccount />
     </div>
   );
 }

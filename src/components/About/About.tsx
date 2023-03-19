@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const AboutContainer = styled.div`
   display: flex;
+  width: 1260px;
+  margin: 0 auto;
   flex-flow: column;
 `;
 const LogoContainer = styled.div`
