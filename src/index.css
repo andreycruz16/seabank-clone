@@ -1,2 +1,10 @@
 @import "./normalize.css";
 @import "./App.css";
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Shopee2021;
+  src: url(./assets/fonts/Shopee2021-ExtraBold.ttf);
+}
