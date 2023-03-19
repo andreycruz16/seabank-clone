@@ -18,6 +18,10 @@ const Item = styled.div<ItemProps>`
   &:hover {
     color: #ea5f00;
   }
+
+  @media (max-width: 1110px) {
+    display: none;
+  }
 `;
 
 function NavItem({ title, active }: NavItemProps) {

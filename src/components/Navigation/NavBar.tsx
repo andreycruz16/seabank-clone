@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SeaBankLogo from "./../../assets/seabank_logo.svg";
 import NavItem from "./NavItem";
+import hamburgerIcon from "./../../assets/images/mobile/hamburger-icon.svg";
 
 export default function NavBar() {
   return (
@@ -15,6 +16,7 @@ export default function NavBar() {
           <NavItem title={"Products & Services"} />
           <NavItem title={"Help Center"} />
           <RegisterBtn>Register for Free</RegisterBtn>
+          <MenuIcon src={hamburgerIcon} />
         </NavItems>
       </Navigation>
     </Header>
@@ -29,6 +31,10 @@ const Header = styled.header`
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media (max-width: 1110px) {
+    height: 48px;
+  }
 `;
 
 const Navigation = styled.nav`
@@ -37,7 +43,12 @@ const Navigation = styled.nav`
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 3.1rem;
-  width: 1350px;
+  width: 100%;
+  max-width: 1350px;
+
+  @media (max-width: 1110px) {
+    padding: 0 1rem;
+  }
 `;
 
 const NavItems = styled.div`
@@ -53,16 +64,25 @@ const RegisterBtn = styled.a`
   display: flex;
   font-size: 14px;
   font-weight: bold;
-  /* height: 40px; */
-  /* line-height: 24px; */
   padding: 8px 22px;
+
+  @media (max-width: 1110px) {
+    padding: 5px 22px;
+  }
+`;
+
+const MenuIcon = styled.img`
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 1110px) {
+    display: flex;
+    padding: 0 0 0 5px;
+  }
 `;
 
 const Logo = styled.a`
   cursor: pointer;
   display: flex;
-  /* font-size: 1.5rem; */
   height: 36px;
-  /* text-decoration: none; */
-  /* width: 111px; */
 `;
