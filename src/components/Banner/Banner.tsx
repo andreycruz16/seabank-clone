@@ -46,15 +46,21 @@ const BannerText = styled.p`
   font-size: 1.5rem;
 `;
 
+const BannerApps = styled.div`
+  display: flex;
+  width: 330px;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+`;
+
 const DownloadApps = styled.div`
   display: flex;
   flex-flow: column;
-  height: 170px;
+  height: 160px;
   justify-content: space-between;
 `;
 
-
-const DownloadAppLinks = styled.img`
+const DownloadAppImg = styled.img`
   display: flex;
   width: 150px;
   height: 46px;
@@ -66,13 +72,6 @@ const QRCodeImage = styled.img`
   height: 162px;
 `;
 
-const BannerApps = styled.div`
-  display: flex;
-  width: 350px;
-  justify-content: space-between;
-  margin: 30px 0 0 0;
-`
-
 registerSwiper();
 
 function Banner() {
@@ -83,14 +82,14 @@ function Banner() {
         pagination-clickable="true"
         space-between="0"
         centered-slides="true"
-        autoplay-delay="5000000"
+        autoplay-delay="5000"
         speed="500"
         autoplay-disable-on-interaction="true"
         loop="true"
       >
         <swiper-slide>
           <img src={homeBanner1} alt="Seabank Banner 1" loading="lazy" />
-          <BannerContentOverlay className="StyleGuide">
+          <BannerContentOverlay>
             <BannerHeader>WELCOME TO SEABANK</BannerHeader>
             <BannerText>
               Earn up to 5% p.a. interest rate daily, with no account fees!
@@ -98,15 +97,26 @@ function Banner() {
             </BannerText>
             <BannerApps>
               <DownloadApps>
-                <DownloadAppLinks src={googlePlay} />
-                <DownloadAppLinks src={appleStore} />
-                <DownloadAppLinks src={appGallery} />
+                <a
+                  href="https://play.google.com/store/apps/details?id=ph.seabank.seabank"
+                  target="_blank"
+                >
+                  <DownloadAppImg src={googlePlay} />
+                </a>
+                <a
+                  href="https://apps.apple.com/ph/app/seabank/id1592249158"
+                  target="_blank"
+                >
+                  <DownloadAppImg src={appleStore} />
+                </a>
+                <a
+                  href="https://appgallery.huawei.com/app/C106857809"
+                  target="_blank"
+                >
+                  <DownloadAppImg src={appGallery} />
+                </a>
               </DownloadApps>
-              <QRCodeImage
-                src={qrCode}
-                alt="QR Code"
-                loading="lazy"
-              />
+              <QRCodeImage src={qrCode} alt="QR Code" loading="lazy" />
             </BannerApps>
           </BannerContentOverlay>
         </swiper-slide>

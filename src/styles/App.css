@@ -15,9 +15,9 @@ html {
 }
 
 .App {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   min-width: 1108px;
-  height: 1000px;
+  height: 2000px;
 }
 
 .StyleGuide {
