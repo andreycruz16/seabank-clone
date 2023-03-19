@@ -36,15 +36,16 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1250px;
+  padding: 0 2rem;
+  width: 1350px;
 `;
 
-const NavItems = styled.div`
+const NavItems = styled.a`
   align-items: center;
   display: flex;
 `;
 
-const RegisterBtn = styled.div`
+const RegisterBtn = styled.a`
   background-color: #ea5f00;
   border-radius: 20px;
   color: #ffffff;
@@ -52,17 +53,16 @@ const RegisterBtn = styled.div`
   display: flex;
   font-size: 14px;
   font-weight: 600;
-  height: 40px;
-  line-height: 24px;
+  /* height: 40px; */
+  /* line-height: 24px; */
   padding: 8px 22px;
 `;
 
 const Logo = styled.a`
-  color: #202325;
   cursor: pointer;
   display: flex;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   height: 36px;
-  text-decoration: none;
-  width: 111px;
+  /* text-decoration: none; */
+  /* width: 111px; */
 `;
