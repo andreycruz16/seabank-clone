@@ -52,7 +52,7 @@ const RegisterBtn = styled.a`
   cursor: pointer;
   display: flex;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: bold;
   /* height: 40px; */
   /* line-height: 24px; */
   padding: 8px 22px;
