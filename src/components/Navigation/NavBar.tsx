@@ -5,12 +5,15 @@ import NavItem from "./NavItem";
 import hamburgerIcon from "./../../assets/images/mobile/hamburger-icon.svg";
 import closeIcon from "./../../assets/images/mobile/close-icon.svg";
 import NavigationMobile from "./NavigationMobile";
+import { useLockedBody } from "usehooks-ts";
 
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [locked, setLocked] = useLockedBody(false, "root");
 
   function handleMenuOnClick() {
     setShowMenu((value) => !value);
+    setLocked(!locked);
   }
 
   return (
