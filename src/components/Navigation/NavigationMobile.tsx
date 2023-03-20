@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export default function NavigationMobile({ showMenu }: { showMenu: boolean }) {
   return (
-    <NavigationMobileContainer showMenu={showMenu}>
-      <NavItemsMobile showMenu={showMenu}>
-        <NavItemMobile>Home</NavItemMobile>
-        <NavItemMobile>About</NavItemMobile>
-        <NavItemMobile>Anything</NavItemMobile>
-      </NavItemsMobile>
-    </NavigationMobileContainer>
+    <Navigation showMenu={showMenu}>
+      <NavItems showMenu={showMenu}>
+        <NavItem active>{"Home"}</NavItem>
+        <NavSeparator />
+        <NavItem>{"Products & Services"}</NavItem>
+        <NavSeparator />
+        <NavItem>{"Help Center"}</NavItem>
+      </NavItems>
+    </Navigation>
   );
 }
 
-const NavigationMobileContainer = styled.div<{
+const Navigation = styled.div<{
   showMenu: boolean;
 }>`
   display: none;
@@ -33,7 +35,7 @@ const NavigationMobileContainer = styled.div<{
   }
 `;
 
-const NavItemsMobile = styled.ul<{
+const NavItems = styled.ul<{
   showMenu: boolean;
 }>`
   display: block;
@@ -49,6 +51,18 @@ const NavItemsMobile = styled.ul<{
     props.showMenu ? "translateX(0px)" : "translateX(220px)"};
 `;
 
-const NavItemMobile = styled.li`
+const NavItem = styled.li<{ active?: boolean }>`
   display: block;
+  background-color: ${(props) => (props.active ? "#fff4f4;" : "")};
+  padding: 11px 12px;
+  border-radius: 6px;
+  color: ${(props) => (props.active ? "#ea5f00;" : "rgba(0, 0, 0, 0.87)")};
+`;
+
+const NavSeparator = styled.div`
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 9px 0;
+  background: #eeeeee;
 `;
