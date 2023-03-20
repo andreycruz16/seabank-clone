@@ -23,8 +23,10 @@ export default function NavBar() {
           <NavItem title={"Home"} active />
           <NavItem title={"Products & Services"} />
           <NavItem title={"Help Center"} />
-          <RegisterBtn>Register for Free</RegisterBtn>
-          <MenuIcon src={(showMenu) ? closeIcon : hamburgerIcon} onClick={handleMenuOnClick} />
+          <RegisterBtn>{'Register for Free'}</RegisterBtn>
+          <MenuIcon>
+            <MenuIconImg src={(showMenu) ? closeIcon : hamburgerIcon} onClick={handleMenuOnClick} />
+          </MenuIcon>
         </NavItems>
       </Navigation>
       <NavigationMobile showMenu={showMenu} />
@@ -80,14 +82,21 @@ const RegisterBtn = styled.a`
   }
 `;
 
-const MenuIcon = styled.img`
-  cursor: pointer;
-  display: none;
-
-  @media (max-width: 768px) {
+const MenuIconImg = styled.img`
     padding: 0;
     display: flex;
     margin: 0 0 0 5px;
+`;
+
+const MenuIcon = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
