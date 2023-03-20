@@ -4,6 +4,7 @@ import SeaBankLogo from "./../../assets/seabank_logo.svg";
 import NavItem from "./NavItem";
 import hamburgerIcon from "./../../assets/images/mobile/hamburger-icon.svg";
 import closeIcon from "./../../assets/images/mobile/close-icon.svg";
+import NavigationMobile from "./NavigationMobile";
 
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,16 +24,10 @@ export default function NavBar() {
           <NavItem title={"Products & Services"} />
           <NavItem title={"Help Center"} />
           <RegisterBtn>Register for Free</RegisterBtn>
-          <MenuIcon src={hamburgerIcon} onClick={handleMenuOnClick} />
+          <MenuIcon src={(showMenu) ? closeIcon : hamburgerIcon} onClick={handleMenuOnClick} />
         </NavItems>
       </Navigation>
-      <NavigationMobile showMenu={showMenu}>
-        <NavItemsMobile showMenu={showMenu}>
-          <NavItemMobile>Home</NavItemMobile>
-          <NavItemMobile>About</NavItemMobile>
-          <NavItemMobile>Anything</NavItemMobile>
-        </NavItemsMobile>
-      </NavigationMobile>
+      <NavigationMobile showMenu={showMenu} />
     </Header>
   );
 }
@@ -70,43 +65,6 @@ const NavItems = styled.div`
   display: flex;
 `;
 
-const NavigationMobile = styled.div`
-  display: none;
-
-  @media (max-width: 768px) {
-    background: rgba(0, 0, 0, 0.5);
-    display: block;
-    height: 100vh;
-    left: 0;
-    opacity: ${(props) => (props.showMenu ? "1" : "0")};
-    position: absolute;
-    right: 0;
-    top: 48px;
-    transition: all 0.3s ease;
-    visibility: ${(props) => (props.showMenu ? "visible" : "hidden")};
-    z-index: 10;
-    overflow: hidden;
-  }
-`;
-
-const NavItemsMobile = styled.ul`
-  display: block;
-  width: 229px;
-  background-color: #ffffff;
-  height: 100%;
-  float: right;
-  padding: 14px 12px;
-  transition: all 0.3s ease;
-  margin: 0;
-  border-top: 1px solid #eeeeee;
-  transform: ${(props) =>
-    props.showMenu ? "translateX(0px)" : "translateX(220px)"};
-`;
-
-const NavItemMobile = styled.li`
-  display: block;
-`;
-
 const RegisterBtn = styled.a`
   background-color: #ea5f00;
   border-radius: 20px;
@@ -127,6 +85,7 @@ const MenuIcon = styled.img`
   display: none;
 
   @media (max-width: 768px) {
+    padding: 0;
     display: flex;
     margin: 0 0 0 5px;
   }
