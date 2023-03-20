@@ -1,14 +1,36 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 export default function NavigationMobile({ showMenu }: { showMenu: boolean }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleNavItemClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
   return (
     <Navigation showMenu={showMenu}>
       <NavItems showMenu={showMenu}>
-        <NavItem active>{"Home"}</NavItem>
+        <NavItem
+          active={activeIndex === 0}
+          onClick={() => handleNavItemClick(0)}
+        >
+          {"Home"}
+        </NavItem>
         <NavSeparator />
-        <NavItem>{"Products & Services"}</NavItem>
+        <NavItem
+          active={activeIndex === 1}
+          onClick={() => handleNavItemClick(1)}
+        >
+          {"Products & Services"}
+        </NavItem>
         <NavSeparator />
-        <NavItem>{"Help Center"}</NavItem>
+        <NavItem
+          active={activeIndex === 2}
+          onClick={() => handleNavItemClick(2)}
+        >
+          {"Help Center"}
+        </NavItem>
       </NavItems>
     </Navigation>
   );
