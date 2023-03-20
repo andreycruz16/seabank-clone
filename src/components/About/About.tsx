@@ -3,8 +3,9 @@ import seabank_logo from "./../../assets/seabank_logo.svg";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
+  overflow: hidden;
   display: flex;
-  width: 1260px;
+  /* width: 1260px; */
   margin: 0 auto;
   flex-flow: column;
 `;

@@ -19,7 +19,7 @@ const Item = styled.div<ItemProps>`
     color: #ea5f00;
   }
 
-  @media (max-width: 1110px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

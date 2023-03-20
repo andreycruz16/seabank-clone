@@ -11,17 +11,16 @@ html {
     sans-serif;
   font-size: 14px;
   line-height: 24px;
-  height: 1000px;
 }
 
 .App {
-  /* background-color: antiquewhite; */
-  /* min-width: 900px; */
-  /* width: 100%; */
-  height: 5000px;
+  background-color: antiquewhite;
+  min-width: 375px;
+  /* height: 10000px; */
 }
 
 .StyleGuide {
   /* use this for development */
+  border: 1px solid lime;
   background-color: #dfc3c375;
 }
