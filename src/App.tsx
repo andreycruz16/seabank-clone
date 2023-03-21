@@ -8,10 +8,10 @@ export default function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <Banner /> */}
-      {/* <About /> */}
-      {/* <SavingsAccount /> */}
-      {/* <SecurityFeatures/> */}
+      <Banner />
+      <About />
+      <SavingsAccount />
+      <SecurityFeatures/>
     </div>
   );
 }
